@@ -29,7 +29,18 @@ tableData.forEach(function(newUFO) {
 
 var button = d3.select("#filter-btn");
 var dateTime = d3.select("#datetime");
-var City = d3.select("#city");
 
+button.on("click", runEnter);
 
+function runEnter() {
+    d3.event.preventDefault();
+    var inputElement = dateTime
+    var inputValue = inputElement.property("value");
+    console.log(inputValue);
+    
+    var filteredData = tableData.filter(UFO => UFO.datetime === inputValue);
+    console.log(filteredData);
 
+    tbody.html("");
+    
+}
