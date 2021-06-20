@@ -42,5 +42,5 @@ function runEnter() {
     console.log(filteredData);
 
     tbody.html("");
-    
+
 }
